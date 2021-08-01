@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/jquery.js"></script>
+    <title>物流中心</title>
+</head>
+<body>
+<div class="minbody">
+    <div class="left">
+        <div class="left-top">
+            <div>当前到件量</div>
+            <p>123,456,789</p>
+        </div>
+        <div class="left-center">
+            <div class="title">
+                <h6>派件入库量占比</h6>
+            </div>
+           <div class="left-center-bottom">
+               <div class="left-center-left"></div>
+               <div class="left-center-right">
+                   <div class="left-center-right-box">
+                       <p class="title-line">
+                           <span class="colora"></span>
+                           <span class="font">顺丰</span>
+                           <span class="numbera">192581</span>
+                           <span class="font">30.87%</span>
+                       </p>
+                       <br>
+                       <p class="title-line">
+                           <span class="colorb"></span>
+                           <span class="font">京东</span>
+                           <span class="numberb">215635</span>
+                           <span class="font">34.08%</span>
+                       </p>
+                       <br>
+                       <p class="title-line">
+                           <span class="colorc"></span>
+                           <span class="font">EMS</span>
+                           <span class="numberc">224585</span>
+                           <span class="font">34.49%</span>
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+        <div class="left-bottom">
+            <div class="title">
+                <h6>广东省寄派件数据</h6>
+                <img class="title-img" src="images/line-blue.png" alt="">
+                <button id="btn" class="btn"><img src="images/select_icon.png" alt="">筛选</button>
+            </div>
+            <div class="left-bottom-bottom"></div>
+        </div>
+    </div>
+    <div class="center">
+            <div class="center-top">
+                <h1>智慧物流服务中心</h1>
+            </div>
+        <div class="center-center">
+            <div class="weather-box">
+                <div class="data">
+                    <p class="time" id="time"></p>
+                    <p id="date" style="color: white">123</p>
+                </div>
+                <div class="weather">
+                   <div class="tianqi"></div>
+                    <div class="tianqia">
+                        <p >多云</p>
+                        <p>16-22℃</p>
+                        <p>深圳市南山区</p>
+                    </div>
+                </div>
+            </div>
+            <img src="images/line_bg.png" alt="">
+
+            <div class="select-box">
+                <ul id="barType">
+                    <li class="active  pai" >派件</li>
+                    <li id="ji" >寄件</li>
+                </ul>
+                <div class="select-a">
+                    <select  class="abc" >
+                        <option class="a">公司</option>
+                        <option class="a">顺丰</option>
+                        <option  class="a">京东</option>
+                        <option  class="a">EMS</option>
+                    </select>
+                    <div class="select-a">
+                        <select  class="abcd" >
+                            <option class="a">快件类型</option>
+                            <option class="a">湖南</option>
+                            <option class="a">湖北</option>
+                            <option class="a">浙江</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="center-bottom">
+            <div class="chart-box">
+                <div class="chart" ></div>
+            </div>
+            <div class="city-data">
+                <div class="city-box">
+                    <p ><span>全网</span>到珠海</p>
+                    <ul class="city-btn">
+                        <li class="active" id="quangwang">全网</li>
+                        <li id="abcde">ABCDE</li>
+                        <li id="fghij">FGHIJ</li>
+                        <li id="klmno">KLMNO</li>
+                        <li id="pqrst">PQRST</li>
+                        <li id="uvwxyz">UVWXYZ</li>
+                    </ul>
+                  <div class="city-box-bottom">
+                      <ul class="city-div" id="city-a"style="display: block" >
+                          <li>安徽</li>
+                          <li>江苏</li>
+                          <li>浙江</li>
+                          <li>广东</li>
+                          <li>天津</li>
+                          <li>河北</li>
+                          <li>北京</li>
+                          <li>天津</li>
+                          <li>江西</li>
+                          <li>内蒙古</li>
+                          <li>河南</li>
+                          <li>云南</li>
+                          <li>河北</li>
+                          <li>辽宁</li>
+                          <li>甘肃</li>
+                          <li>贵州</li>
+                          <li>四川</li>
+                      </ul>
+                      <ul class="city-div" id="city-b">
+                          <li>安徽</li>
+                          <li>江苏</li>
+                          <li>浙江</li>
+                          <li>广东</li>
+                      </ul>
+                      <ul class="city-div" id="city-c">
+                          <li>天津</li>
+                          <li>河北</li>
+                          <li>北京</li>
+                          <li>天津</li>
+                      </ul>
+                      <ul class="city-div" id="city-d" >
+                          <li>江西</li>
+                          <li>内蒙古</li>
+                          <li>河南</li>
+                          <li>云南</li>
+                      </ul>
+                      <ul class="city-div" id="city-e" >
+                          <li>河北</li>
+                          <li>辽宁</li>
+                          <li>甘肃</li>
+                          <li>贵州</li>
+                          <li>四川</li>
+                      </ul>
+                      <ul class="city-div" id="city-f" >
+                          <li>上海</li>
+                          <li>新疆</li>
+                          <li>乌鲁木齐</li>
+                          <li>杭州</li>
+                          <li>拉萨</li>
+                      </ul>
+                  </div>
+                </div>
+                <ul class="pai-box">
+                    <li>
+                        <span></span>
+                        <p>城市</p>
+                        <p>派件</p>
+                    </li>
+                    <li>
+                        <span>1</span>
+                        <p>天津市</p>
+                        <p>178546</p>
+                    </li>
+                    <li>
+                        <span>2</span>
+                        <p>湖南省</p>
+                        <p>125687</p>
+                    </li>
+                    <li>
+                        <span>3</span>
+                        <p>福建省</p>
+                        <p>78452</p>
+                    </li>
+                    <li>
+                        <span>4</span>
+                        <p>北京市</p>
+                        <p>57841</p>
+                    </li>
+                    <li>
+                        <span>5</span>
+                        <p>江苏省</p>
+                        <p>45879</p>
+                    </li>
+                    <li>
+                        <span>6</span>
+                        <p>海南</p>
+                        <p>28584</p>
+                    </li>
+                    <li>
+                        <span>7</span>
+                        <p>四川省</p>
+                        <p>14852</p>
+                    </li>
+                    <li>
+                        <span>8</span>
+                        <p>浙江省</p>
+                        <p>12345</p>
+                    </li>
+                    <li>
+                        <span>9</span>
+                        <p>重庆市</p>
+                        <p>12759</p>
+                    </li>
+                </ul>
+                <div class="fengye-box">
+                    <button class="fengye-btn" id="fangda"></button>
+                    <ul class="modal-btn">
+                        <li id="a">
+                            <div></div>1</li>
+                        <li id="b">
+                            <div></div>2</li>
+                        <li id="c">
+                            <div></div>3</li>
+                        <li id="d">
+                            <div></div>4</li>
+                        <li id="e">
+                            <div></div>5</li>
+                        <li id="f">
+                            <div></div>6</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="right">
+
+        <div class="right-top">
+            <div class="title">
+                <h6 class="shuju">派件数据</h6>
+                <img class="title-img" src="images/line-blue.png" alt="">
+                <button id="btnn"class="btn"><img src="images/chart_icon.png" alt=""><span>图标</span></button>
+            </div>
+            <p class="jian">单位：件</p>
+            <div class="right-top-chart"></div>
+            <div class="data-box" style="display:none;">
+                <table class="table1" >
+                    <tr>
+                        <td>入库件</td>
+                        <td colspan="3" class="table-data dph-data1">0</td>
+                    </tr>
+                    <tr class="bg-color">
+                        <td rowspan="2">在库件</td>
+                        <td rowspan="2" class="table-data dph-data2">0</td>
+                        <td>正常件</td>
+                        <td class="table-data dph-data3">0</td>
+                    </tr>
+                    <tr class="bg-color">
+                        <td>滞留件</td>
+                        <td class="table-data dph-data5">0</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">出库件</td>
+                        <td rowspan="2" class="dph-data6">0</td>
+                        <td>派送件</td>
+                        <td class="table-data dph-data7">0</td>
+                    </tr>
+                    <tr>
+                        <td>自提件</td>
+                        <td class="table-data dph-data8">0</td>
+                    </tr>
+                    <tr class="bg-color">
+                        <td>退签件</td>
+                        <td colspan="3" class="table-data dph-data9">0</td>
+                    </tr>
+                    <tr>
+                        <td>丢失件</td>
+                        <td colspan="3" class="table-data dph-data4">0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="right-center">
+            <div class="title">
+                <p id="switchBtn"><span class="act" >收入数据</span>
+                    <img class="line-blue" src="images/line-blue.png" alt="">
+                    <span class="zhichu">支出数据</span></p>
+                <img class="title-img" src="images/line-blue.png" alt="">
+                <button id="btnnn"class="btn"><img src="images/data_icon.png" alt="">日期</button>
+            </div>
+            <div class="right-center-center">
+                <p class="data-number" id="totalProfit">123,456.5元</p>
+            </div>
+
+        </div>
+        <div class="right-bottom">
+            <div class="title">
+                <button id="btnnnn"class="btn"><img src="images/settings_icon.png" alt="">设置</button>
+            </div>
+            <div class="right-center-bottom">
+                <div class="settings-box">
+                    <p><img src="images/teacher_icon.png" alt="">今日值班：<span id="name_a"></span><span id="date_a"></span></p>
+                    <p><img src="images/people_iocn.png" alt="">负责人：<span id="lea_a"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--one-->
+    <div class="tanchuceng">
+    <div class="tanchuceng-box">
+        <div class="blue"></div>
+        <span class="close">×</span>
+        <h2>当前到件量</h2>
+        <div class="one-box">
+            <p>123,456,789</p>
+        </div>
+    </div>
+    </div>
+
+    <!--two-->
+    <div class="tanchucenga">
+    <div class="tanchuceng-box">
+        <div class="blue"></div>
+        <h2>派件入库量占比</h2>
+        <span class="close">×</span>
+        <div class="two-box">
+            <div class="left-center-bottom-two">
+                <div class="left-center-left-two"></div>
+                <div class="left-center-right-two">
+                    <div class="left-center-right-box-two">
+                        <p class="title-line-two">
+                            <span class="colora-a"></span>
+                            <span class="font-a">顺丰</span>
+                            <span class="numbera-a">192581</span>
+                            <span class="font-a">30.87%</span>
+                        </p>
+                        <br>
+                        <p class="title-line-two">
+                            <span class="colorb-b"></span>
+                            <span class="font-a">京东</span>
+                            <span class="numberb-b">215635</span>
+                            <span class="font-a">34.08%</span>
+                        </p>
+                        <br>
+                        <p class="title-line-two">
+                            <span class="colorc-c"></span>
+                            <span class="font-a">EMS</span>
+                            <span class="numberc-c">224585</span>
+                            <span class="font-a">34.49%</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!--three-->
+        <div class="tanchucengb">
+    <div class="tanchuceng-box">
+        <div class="blue"></div>
+        <h2>广东省寄派件数据</h2>
+        <span class="close">×</span>
+        <div class="three-box">
+            <div class="select-a-a">
+                <select  class="abcd-a-a" >
+                    <option class="a-a">派件</option>
+                    <option class="a-a">取件</option>
+                </select>
+            </div>
+            <div class="select-a-a">
+                <select  class="abc-a" >
+                    <option class="a-a">公司</option>
+                    <option class="a-a">顺丰</option>
+                    <option  class="a-a">京东</option>
+                    <option  class="a-a">EMS</option>
+                </select>
+            </div>
+                <div class="select-a-a">
+                    <select  class="abcd-a" >
+                        <option class="a-a">快件类型</option>
+                        <option class="a-a">湖南</option>
+                        <option class="a-a">湖北</option>
+                        <option class="a-a">浙江</option>
+                    </select>
+                </div>
+
+            <div class="guangdong">
+
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--four-->
+            <div class="tanchucengc">
+        <div class="tanchuceng-box">
+        <div class="blue"></div>
+        <h2>123456</h2>
+        <span class="close">×</span>
+        <div class="four-box">
+
+
+
+
+
+
+        </div>
+        </div>
+            </div>
+
+
+    <!--five-->
+                <div class="tanchucengd">
+             <div class="tanchuceng-box">
+        <div class="blue"></div>
+        <h2>123456</h2>
+        <span class="close">×</span>
+        <div class="five-box">
+
+            </div>
+         </div>
+                </div>
+
+
+    <!--six-->
+    <div class="tanchucenge">
+    <div class="tanchuceng-box">
+        <div class="blue"></div>
+        <h2>123456</h2>
+        <span class="close">×</span>
+        <div class="six-box">
+
+        </div>
+    </div>
+</div>
+
+    <!--lay-->
+<div class="lay">
+    <div class="tanchuceng-box">
+        <div class="blue"></div>
+        <h2>设置</h2>
+        <span class="close">×</span>
+        <div class="layui">
+            <div class="set-box">
+                <label class="four-f">排班日期</label>
+                <div class="time-div">
+                    <input class="time-input" type="text" value="" id="times">
+                    <img src="images/selsct_time.png" alt="">
+                </div>
+            </div>
+            <div class="set-box">
+                <label>值班人</label>
+                <input type="text" value="" id="zhiban" name="test">
+                <button class="plus" id="addT"></button>
+                <button class="mineus" id="mineusT" style="display:none;"></button>
+            </div>
+            <div class="set-box">
+                <label>负责人</label>
+                <input type="text" value="" id="fuze">
+                <button class="plus" id="addL"></button>
+                <button class="mineus" id="mineusL" style="display:none;"></button>
+                <button class="add-btn" id="addSet"><img src="images/plus.png" alt="">添加</button>
+            </div>
+            <table class="table3">
+                <thead>
+                <tr>
+                    <th>值班人</th>
+                    <th>排班日期</th>
+                    <th>负责人</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="tList">
+                <!--
+                                        <tr>
+                                            <td colspan="4">
+                                                <p style="width:9.6rem;">暂无数据</p>
+                                            </td>
+                                        </tr>
+                -->
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="pages-div" class="mineus">
+                <button class="prev"></button>
+                <p id="page"><span>0</span>/<span>0</span></p>
+                <button class="next"></button>
+                <input type="number">
+                <button class="skip">跳转</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</div>
+<script>
+    $(function () {
+        main.init();
+    });
+    // $("#barType").on('click', 'li', function () {
+    //     $(this).addClass('active').siblings('li').removeClass('active');
+    // })
+    // $("#ji").click(function () {
+    //    $(".shuju").html('寄件数据')
+    // })
+    // $(".pai").click(function () {
+    //     $(".shuju").html('派件数据')
+    // })
+    // $('#fangda').on('click', function () {
+    //     if ($(this).siblings('ul').is(":hidden")) {
+    //         $(this).addClass('active').siblings('ul').show();
+    //     } else {
+    //         $(this).removeClass('active').siblings('ul').hide();
+    //     }
+    // })
+    // $(".title").on('click', 'span',function () {
+    //     $(this).addClass('act').siblings('span').removeClass('act');
+    //     $('#totalProfit').eq($(this).index()).html('123,456.5元');
+    //
+    // })
+    //     $(".zhichu").click(function(){
+    //         $(".data-number").html(function(){
+    //             return "5201314.5元";
+    //         });
+    //     });
+    // $('#btnn').on('click', function () {
+    //     if ($('.right-top').children('.right-top-chart').is(':hidden')) {
+    //         $(this).children('span').html('图表');
+    //         $('.right-top').children('.right-top-chart').show().siblings('.data-box').hide();
+    //
+    //     } else {
+    //         $(this).children('span').html('表格');
+    //         $('.right-top').children('.data-box').show().siblings('.right-top-chart').hide();
+    //     }
+    // })
+    // $("#a").click(function () {
+    //     $(".tanchuceng").css("display","block")
+    // })
+    // $("#b").click(function () {
+    //     $(".tanchucenga").css("display","block")
+    // })
+    // $("#c").click(function () {
+    //     $(".tanchucengb").css("display","block")
+    // })
+    // $("#d").click(function () {
+    //     $(".tanchucengc").css("display","block")
+    // })
+    // $("#e").click(function () {
+    //     $(".tanchucengd").css("display","block")
+    // })
+    // $("#f").click(function () {
+    //     $(".tanchucenge").css("display","block")
+    // })
+    // $("#btnnnn").click(function () {
+    //     $(".lay").css("display","block")
+    // })
+    // $(".close").click(function () {
+    //     $(".lay").css("display","none")
+    // })
+    // $(".close").click(function () {
+    //     $(".tanchuceng").css("display","none")
+    // })
+    // $(".close").click(function () {
+    //     $(".tanchucenga").css("display","none")
+    // })
+    // $(".close").click(function () {
+    //     $(".tanchucengb").css("display","none")
+    // })
+    // $(".close").click(function () {
+    //     $(".tanchucengc").css("display","none")
+    // })
+    // $(".close").click(function () {
+    //     $(".tanchucengd").css("display","none")
+    // })
+    // $(".close").click(function () {
+    //     $(".tanchucenge").css("display","none")
+    // })
+    //
+    //     $(".city-btn li").click(function () {
+    //         $(this).addClass('active');
+    //         $(this).siblings().removeClass('active');
+    //       $('.city-box-bottom ul').eq($(this).index()).css("display","block");
+    //         $('.city-box-bottom ul').eq($(this).index()).siblings().css("display","none");
+    //     })
+
+
+</script>
+<script src="js/xg.js"></script>
+<script src="js/echarth.js"></script>
+<script src="js/myMap.js"></script>
+<script src="js/map.js"></script>
+<script src="js/ditu.js"></script>
+<script src="js/index.js"></script>
+<script src="js/flexible.js"></script>
+<script src="js/time.js"></script>
+</body>
+</html>

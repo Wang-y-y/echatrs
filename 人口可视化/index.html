@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>人口可视化</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/echarts.min.js"></script>
+</head>
+<body>
+<div class="min-body">
+    <header>
+        <h1>可视化</h1>
+        <div class="showTime">
+            <span></span>
+        </div>
+        <span class="ren">人口结构</span>
+    </header>
+    <section class="mainbox">
+        <div class="left">
+            <div class="left-top">
+                <div class="left-top-left">
+                    <div class="left-top-left-top">
+                        <span class="txt">男女比例</span>
+                        <span class="tt">单位:万人</span>
+                        <div class="charta"></div>
+                    </div>
+                    <div class="left-top-left-bottom">
+                        <span class="txt">城乡比例</span>
+                        <span class="tt">单位:万人</span>
+                        <div class="chartb"></div>
+                    </div>
+                </div>
+                <div class="left-top-center">
+                    <span class="txt">劳动年龄人口</span>
+                    <div class="left-top-center-top">
+                        <div class="aaaaa">
+                            <span class="age">15-59岁</span>
+                        </div>
+                        <div class="chartc"></div>
+                    </div>
+                    <div class="left-top-center-bottom">
+                        <div class="aaaaa">
+                            <span class="age">15-64岁</span>
+                        </div>
+                        <div class="chartd"></div>
+                    </div>
+
+
+                </div>
+                <div class="left-top-right">
+                    <span class="txt">抚养比</span>
+                    <div class="left-top-right-a">
+                        <!--<img src="img/1.png" alt="" class="imga">-->
+                        <!--<img src="img/4.png" alt="" class="imgb">-->
+                        <!--<img src="img/5.png" alt="" class="imgc">-->
+                        <div class="imga"></div>
+                        <div class="imgb"></div>
+                        <div class="imgc"></div>
+                        <div class="cirle"></div>
+                        <span class="title">少儿抚养比</span>
+                        <span class="bai">28%</span>
+                    </div>
+                    <div class="left-top-right-b">
+                        <div class="imga"></div>
+                        <div class="imgb"></div>
+                        <div class="imgc"></div>
+                        <div class="cirle"></div>
+                        <span class="title">少儿抚养比</span>
+                        <span class="bai">28%</span>
+                    </div>
+                    <div class="left-top-right-c">
+                        <div class="imga"></div>
+                        <div class="imgb"></div>
+                        <div class="imgc"></div>
+                        <div class="cirle"></div>
+                        <span class="title">少儿抚养比</span>
+                        <span class="bai">28%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="left-bottom">
+                <div class="left-bottom-left">
+                    <span class="txt">新生儿比例</span>
+                    <span class="wan">单位:万人</span>
+                    <div class="charte"></div>
+                </div>
+                <div class="left-bottom-right">
+                    <span class="txt">老年化比例</span>
+                    <div class="tab js-tab" nlData='yn'>60岁以上</div>
+                    <div class="tab js-tab" nlData='ys' >65岁以上</div>
+                    <span class="dan">单位:万人 </span>
+                    <div class="chartf"></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <span class="txt">分年龄段人口</span>
+            <div class="chartg"></div>
+        </div>
+    </section>
+</div>
+<script src="js/flexible.js"></script>
+<script src="js/jQuery.js"></script>
+<script src="js/echarth.js"></script>
+<script src="js/index.js"></script>
+<script>
+    $(function () {
+        $('.js-tab').click(function () {
+            $(this).addClass('on').siblings().removeClass('on');
+        })
+    });
+</script>
+<script>
+    function getTime(){
+        var myDate = new Date();
+        var myYear = myDate.getFullYear(); //获取完整的年份(4位,1970-????)
+        var myMonth = myDate.getMonth()+1; //获取当前月份(0-11,0代表1月)
+        var myToday = myDate.getDate(); //获取当前日(1-31)
+        var myDay = myDate.getDay(); //获取当前星期X(0-6,0代表星期天)
+        var myHour = myDate.getHours(); //获取当前小时数(0-23)
+        var myMinute = myDate.getMinutes(); //获取当前分钟数(0-59)
+        var mySecond = myDate.getSeconds(); //获取当前秒数(0-59)
+        var week = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        var nowTime;
+
+        nowTime = myYear+'年'+fillZero(myMonth)+'月'+fillZero(myToday)+'日'+'&nbsp;&nbsp;'+fillZero(myHour)+':'+fillZero(myMinute)+':'+fillZero(mySecond)+'&nbsp;&nbsp;';
+        //console.log(nowTime);
+        $('.showTime span').html(nowTime);
+    };
+    function fillZero(str){
+        var realNum;
+        if(str<10){
+            realNum	= '0'+str;
+        }else{
+            realNum	= str;
+        }
+        return realNum;
+    }
+    setInterval(getTime,1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.body{
+    width: 100%;
+    height: 100%;
+    background-color: #081832;
+    position: absolute;
+}
+header{
+    width: 100%;
+    height: 10%;
+    background-color:#030829;
+}
+.top{
+    width: 40%;
+    height: 100%;
+    background: url("../img/17deaca190656416e5832ea96d30141.png");
+    background-size: 100% 100%;
+    margin: auto;
+    text-align: center;
+    line-height: 0.9rem;
+}
+.top h2{
+    color: white;
+    font-size: 0.3rem;
+}
+.min-box{
+    width: 100%;
+    height: 88%;
+    display: flex;
+    margin-top:0.2rem ;
+}
+.left{
+    flex: 5.5;
+    height: 100%;
+    margin-right: 0.3rem;
+    margin-left: 0.2rem;
+}
+.left-top{
+    width: 100%;
+    height: 48%;
+    background-color: #030829;
+    -webkit-box-shadow: #044562 0px 0px 20px;
+    -moz-box-shadow: #044562 0px 0px 20px;
+    box-shadow: #044562 0px 0px 20px;
+}
+.left-top-a{
+    width: 100%;
+    height:90% ;
+    display: flex;
+}
+.left-top-left{
+    flex: 6;
+    width: 50%;
+    height: 100%;
+    margin-right: 0.2rem;
+}
+.left-top-right{
+    flex: 6;
+    width: 50%;
+    height: 100%;
+    margin-right: 0.2rem;
+}
+.left-top-right-title{
+    width: 100%;
+    height: 20%;
+
+}
+.a{
+    width: 25%;
+    height: 100%;
+    float: left;
+   text-align: center;
+    margin-left: 0.3rem;
+    margin-top: 0.1rem;
+}
+.a-a{
+color: white;
+    font-size: 0.2rem;
+}
+.a-b{
+    color: #84CBF7;
+    font-size: 0.4rem;
+}
+.a-d{
+    color: red;
+    font-size: 0.4rem;
+}
+.a-f{
+    color: #FB764D;
+    font-size: 0.4rem;
+}
+
+.left-top-right-chart{
+    width: 100%;
+    height: 80%;
+}
+.title{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
+    width: 60%;
+    height: 0.35rem;
+    position: relative;
+    top: -0.1rem;
+    background-color: #034D6A;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+.title span{
+
+    line-height: 0.35rem;
+    font-size: 0.1rem;
+}
+.left-bottom{
+    width: 100%;
+    height: 48%;
+    margin-top: 0.3rem;
+    display: flex;
+}
+.left-bottom-right{
+    background-color: #030829;
+    -webkit-box-shadow: #044562 0px 0px 20px;
+    -moz-box-shadow: #044562 0px 0px 20px;
+    box-shadow: #044562 0px 0px 20px;
+    flex: 6;
+}
+.left-bottom-left{
+    background-color: #030829;
+    -webkit-box-shadow: #044562 0px 0px 20px;
+    -moz-box-shadow: #044562 0px 0px 20px;
+    box-shadow: #044562 0px 0px 20px;
+    flex: 6;
+    margin-right: 0.2rem;
+}
+.titlea{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
+    width: 60%;
+    height: 0.35rem;
+    position: relative;
+    top: -0.1rem;
+    background-color: #034D6A;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+.titlea span{
+    display: inline-block;
+    line-height: 0.35rem;
+    font-size: 0.1rem;
+}
+.left-bottom-left-bottom{
+    width: 5rem;
+    height:90% ;
+    background-color: #030829;
+}
+.left-bottom-right-bottom{
+    width: 100%;
+    height: 90%;
+}
+.right{
+    margin-right: 0.2rem;
+    flex: 5.5;
+    height: 100%;
+}
+.right-top{
+    background-color: #030829;
+    -webkit-box-shadow: #044562 0px 0px 10px;
+    -moz-box-shadow: #044562 0px 0px 10px;
+    box-shadow: #044562 0px 0px 10px;
+    width: 100%;
+    height: 48%;
+}
+.right-bottom{
+    width: 100%;
+    height: 48%;
+    margin-top: 0.3rem;
+    display: flex;
+}
+.right-bottom-right{
+    background-color: #030829;
+    -webkit-box-shadow: #044562 0px 0px 20px;
+    -moz-box-shadow: #044562 0px 0px 20px;
+    box-shadow: #044562 0px 0px 20px;
+    flex: 6;
+}
+.right-bottom-left{
+    background-color: #030829;
+    -webkit-box-shadow: #044562 0px 0px 20px;
+    -moz-box-shadow: #044562 0px 0px 20px;
+    box-shadow: #044562 0px 0px 20px;
+    flex: 6;
+    margin-right: 0.2rem;
+}
+.right-top-a{
+    width: 100%;
+    height:90% ;
+    display: flex;
+}
+.right-top-left{
+    flex: 6;
+    width: 50%;
+    height:100% ;
+    margin-right: 0.2rem;
+}
+.right-top-right{
+    flex: 6;
+    width: 50%;
+    height:100% ;
+    margin-right: 0.2rem;
+}
+.right-bottom-left-bottom{
+    width: 5rem;
+    height:90% ;
+    margin-top: 0.2rem;
+}
+.right-bottom-right-bottom{
+    width: 5rem;
+    height:90% ;
+}
+.pai-box {
+    width: 100%;
+    position: relative;
+}
+
+.pai-box>li {
+    width: 100%;
+    height: 0.42rem;
+    line-height: 0.42rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    font-size: 0.18rem;
+    color: rgba(255, 255, 255, .7);
+}
+
+.pai-box>li>span {
+    width: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.pai-box>li>p {
+    width: 0;
+    flex-grow: 2;
+    color: rgba(255, 255, 255, .7);
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pai-box>li:nth-child(2n+1) {
+    background: rgba(14, 148, 235, 0.102);
+}
+
+.pai-box>li:first-child {
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.2rem;
+}
+
+.pai-box>li:first-child>p {
+    color: white;
+}
+.imga{
+   width: 0.2rem;
+    height: 0.2rem;
+   background: url("../img/1.png");
+    background-size: 100% 100%;
+    position: relative;
+    top: 0.03rem;
+    display: inline-block;
+}
+.imgb{
+    width: 0.2rem;
+    height: 0.2rem;
+    background: url("../img/2.png");
+    background-size: 100% 100%;
+    position: relative;
+    top: 0.03rem;
+    display: inline-block;
+}
+.imgc{
+    background: url("../img/3.png");
+    background-size: 100% 100%;
+    width: 0.2rem;
+    height: 0.2rem;
+    position: relative;
+    top: 0.03rem;
+    display: inline-block;
+}
+.imgd{
+    width: 0.2rem;
+    height: 0.2rem;
+    background: url("../img/4.png");
+    background-size: 100% 100%;
+    position: relative;
+    top: 0.03rem;
+    display: inline-block;
+}
+.imge{
+    width: 0.2rem;
+    height: 0.2rem;
+    background: url("../img/5.png");
+    background-size: 100% 100%;
+    position: relative;
+    top: 0.03rem;
+    display: inline-block;
+}
+.imgf{
+    width: 0.2rem;
+    height: 0.2rem;
+    background: url("../img/6.png");
+    background-size: 100% 100%;
+    position: relative;
+    top: 0.03rem;
+    display: inline-block;
+}

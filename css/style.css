@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    background-color: #081832;
+}
+
+header {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    color:white;
+}
+#app {
+     width: 1200px;
+     display: flex;
+    flex-wrap: wrap;
+     justify-content: space-between;
+     position: relative;
+ }
+#ap{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: relative;
+}
+#a{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: relative;
+}
+.box {
+    width: 280px;
+    background: #f6f6f6;
+    box-sizing: border-box;
+    padding: 0 15px 25px 15px;
+}
+.box a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #535353;
+    text-decoration: none;
+}
+.box a:hover {
+    color: #081832;
+}
+.imgBox {
+    width: 280px;
+    height: 186.67px;
+    overflow: hidden;
+}
+.imgBox img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s linear;
+}
+.source {
+    border: 1px solid #535353;
+    padding: 6px 20px;
+    border-radius: 25px;
+    margin: 20px;
+}
+.title {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.detail {
+    font-size: 14px;
+    line-height: 160%;
+    text-align: justify;
+    width: 100%;
+}
+/*鼠标hover效果*/
+.box>a::after {
+    content: '';
+    width: 280px;
+    position: absolute;
+    background: black;
+    bottom: 0;
+    height: 0px;
+    transition: height 0.3s linear;
+}
+
+.box>a:hover::after {
+    height: 10px;
+}
+
+.box:hover img {
+    transform: scale(1.15);
+}
+
+.box:hover .source {
+    background:#081832;
+    color: #ffffff;
+}
